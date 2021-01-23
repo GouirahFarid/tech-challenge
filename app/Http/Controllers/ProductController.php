@@ -2,63 +2,44 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\services\ProductService;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    protected  ProductService  $productService;
+    public  function __construct(ProductService $productService)
+    {
+        $this->productService=$productService;
+    }
+
     public function index()
     {
-        //
+        return $this->productService->getAll();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        dump($request);
+       /* $filename=$request->get('name').''.$request->file('image')->extension();
+        dump($filename);*/
+        return response()->json('message','hello vue');
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Product $product)
+
+    public function show($product)
     {
-        //
+        $this->productService->getModelById($product);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Product $product)
+    /*public function update(Request $request, Product $product)
     {
         //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Product $product)
+    }*/
+    public function destroy($product)
     {
-        //
+        $this->productService->deleteModel($product);
     }
 }
