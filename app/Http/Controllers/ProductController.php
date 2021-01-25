@@ -16,28 +16,20 @@ class ProductController extends Controller
 
     public function index()
     {
-        return $this->productService->getAll();
+        return $this->productService->getAllModels();
     }
 
     public function store(Request $request)
     {
-        dump($request);
-       /* $filename=$request->get('name').''.$request->file('image')->extension();
-        dump($filename);*/
-        return response()->json('message','hello vue');
-
+         $this->productService->CreateModel($request);
     }
 
 
     public function show($product)
     {
-        $this->productService->getModelById($product);
+       return $this->productService->getModelById($product);
     }
 
-    /*public function update(Request $request, Product $product)
-    {
-        //
-    }*/
     public function destroy($product)
     {
         $this->productService->deleteModel($product);

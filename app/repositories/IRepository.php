@@ -4,10 +4,12 @@
 namespace App\repositories;
 
 
+
 interface IRepository
 {
-    public  function getAll();
+    public  function getAllModels();
     public  function getById($id);
+    public  function paginate($limit);
     public  function create($model);
     public  function delete($id);
 
