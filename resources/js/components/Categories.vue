@@ -14,6 +14,7 @@
                             <th>Category name:</th>
                             <th>Category Parent</th>
                             <th>Category Children</th>
+                            <th>Control</th>
                         </tr>
                         </thead>
                         <tbody>

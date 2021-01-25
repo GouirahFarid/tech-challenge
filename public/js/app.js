@@ -1906,6 +1906,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Categories",
   data: function data() {
@@ -4678,7 +4679,9 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Category Parent")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Category Children")])
+        _c("th", [_vm._v("Category Children")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Control")])
       ])
     ])
   }
