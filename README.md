@@ -1,4 +1,5 @@
 #Tech-Challeneg by Farid GOUIRAH
+* ```LARAVEL8```,```MYSQL```,```Vuejs```,```Vuex```,```Vue router```,```vuelidate```,```BULMA```
 * checkout repositories,services .controllers,recources,migration for more informations
 * you can use postman or web pages appliaction
 * create category  ```api/categories``` post request data{name(required,categoryId(parent category not required)} 
