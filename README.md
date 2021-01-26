@@ -5,8 +5,8 @@
 * create category  ```api/categories``` post request data{name(required,categoryId(parent category not required)} 
 * delete category ```api/categries/{categoyId}``` delete request
 * get all categories ```api/categories``` get request
-* get categoru with ID  ```api/categries/{categoyId}```
+* get category by ID  ```api/categries/{categoyId}```
 * create product  ```api/products``` post request data{name ,price, description,image(file),categoriesId(product categories)} 
 * delete product ```api/products/{productID}``` delete request
 * get all products ```api/products``` get request
-* get categoru with ID  ```api/products/{categoyId}``` get request
+* get product by ID  ```api/products/{categoyId}``` get request
